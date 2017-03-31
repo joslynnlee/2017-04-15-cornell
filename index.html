@@ -1,19 +1,19 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS EITHER.  (THANK YOU.)
-carpentry: "FIXME"    # what kind of Carpentry (must be either "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+carpentry: "swc"    # what kind of Carpentry (must be either "dc" or "swc")
+venue: "Cornell University"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Ithaca, NY 14850"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "42.4535013,-76.4734905"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
+humandate: "April 15, 2017"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:00 am - 5:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2017-04-15      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2017-04-15        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Joslynn Lee"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["na"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: ["joslynnlee@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 etherpad:             # optional: URL for the workshop Etherpad if there is one
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
@@ -36,7 +36,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   'eventbrite' has been set in the header.  You can delete it if you
   are not using Eventbrite, or leave it in, since it will not be
   displayed if the 'eventbrite' field in the header is not set.
--->
+
 {% if page.eventbrite %}
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
@@ -51,7 +51,7 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 Delete these lines and please fill in 
 <a href="{{site.amy_site}}/submit">this self-organized workshop form</a>
 and the administrator will contact you if we need any extra information.</h4>
-
+-->
 <h2 id="general">General Information</h2>
 
 <!--
@@ -61,8 +61,8 @@ and the administrator will contact you if we need any extra information.</h4>
   the pitch.
 -->
 <p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>
-  aims to help researchers get their work done
+  Adapted from <a href="{{site.swc_site}}">Software Carpentry</a>
+  workshops, SWC aims to help researchers get their work done
   in less time and with less pain
   by teaching them basic research computing skills.
   This hands-on workshop will cover basic concepts and tools,
@@ -70,6 +70,7 @@ and the administrator will contact you if we need any extra information.</h4>
   and task automation.
   Participants will be encouraged to help one another
   and to apply what they have learned to their own research problems.
+  This is a shortened course from the traditional 2-day workshop.
 </p>
 <p align="center">
   <em>
@@ -85,9 +86,12 @@ and the administrator will contact you if we need any extra information.</h4>
   Explain who your audience is.  (In particular, tell readers if the
   workshop is only open to people from a particular institution.
 -->
+<p id="why">
+  <strong>Why:</strong>
+  This is presented as part of the AISES/SACNAS Cornell Chapter as part of the Professional Development Sessions For Students and Faculty.</p>
 <p id="who">
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  The course is aimed at students and researchers.
   <strong>You don't need to have any previous knowledge of the tools that will
     be presented at the workshop.</strong>
 </p>
@@ -130,7 +134,7 @@ and the administrator will contact you if we need any extra information.</h4>
   Modify the block below if there are any special requirements.
 -->
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
+  <strong>Requirements:</strong> Participants can use or install necessary items on their laptop with a
   Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
   on. They should have a few specific software packages installed (listed
   <a href="#setup">below</a>). They are also required to abide by
@@ -198,33 +202,30 @@ and the administrator will contact you if we need any extra information.</h4>
 -->
 <h2 id="schedule">Schedule</h2>
 
-<!-- DO NOT EDIT SURVEY LINKS -->
+<!-- DO NOT EDIT SURVEY LINKS
 <p><em>Surveys</em></p>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-
+-->
 <div class="row">
   <div class="col-md-6">
     <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:00</td>  <td>Welcome and Introduction</td> </tr>
+      <tr> <td>09:15-12:00</td>  <td><a href="http://swcarpentry.github.io/shell-novice/">The Unix Shell</a></td> </tr>
+      <tr> <td>09:00</td>  <td><a href="http://swcarpentry.github.io/shell-novice/02-filedir/">Navigating Files and Directories</a></td> </tr>
+      <tr> <td>09:50</td>  <td><a href="http://swcarpentry.github.io/shell-novice/03-create/">Working with Files and Directories</a></td> </tr>
+      <tr> <td>10:05</td>  <td><a href="http://swcarpentry.github.io/shell-novice/04-pipefilter/">Pipes and Filters</a></td> </tr>
+      <tr> <td>10:30</td>  <td>Break</td> </tr>
+      <tr> <td>10:40</td>  <td><a href="http://swcarpentry.github.io/shell-novice/01-intro/">Loops</a></td> </tr>
+      <tr> <td>11:20</td>  <td><a href="http://swcarpentry.github.io/shell-novice/02-filedir/">Shell Scripts</a></td> </tr>
+      <tr> <td>11:40</td> <td><a href="http://swcarpentry.github.io/shell-novice/03-create/">Finding Things</a></td> </tr>    
+      <tr> <td>12:00</td>  <td>Wrap-up Unix Section</td> </tr>
+      <tr> <td>01:00-4:00</td>  <td><a href="http://www.datacarpentry.org/R-ecology-lesson/">Intro to RStudio and Data Analysis</a></td> </tr>
+      <tr> <td>02:30</td>  <td>Coffee</td> </tr>
+      <tr> <td>04:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>04:00-5:00</td>  <td>Extra time to complete lesson or help for your data</td> </tr>
     </table>
   </div>
 </div>
@@ -242,7 +243,7 @@ and the administrator will contact you if we need any extra information.</h4>
 
   where 'YYYY-MM-DD-site' is the identifier for your workshop,
   e.g., '2015-06-10-esu'.
--->
+
 {% if page.etherpad %}
 <p id="etherpad">
   <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
@@ -285,6 +286,7 @@ and the administrator will contact you if we need any extra information.</h4>
       <li><a href="{{site.swc_pages}}/shell-novice/reference/">Reference...</a></li>
     </ul>
   </div>
+<!--
   <div class="col-md-6">
     <h3 id="syllabus-python">Programming in Python</h3>
     <ul>
@@ -298,7 +300,7 @@ and the administrator will contact you if we need any extra information.</h4>
       <li><a href="{{site.swc_pages}}/python-novice-inflammation/reference/">Reference...</a></li>
     </ul>
   </div>
-  <!--
+  -->
   <div class="col-md-6">
     <h3 id="syllabus-r">Programming in R</h3>
     <ul>
@@ -310,7 +312,7 @@ and the administrator will contact you if we need any extra information.</h4>
       <li><a href="{{site.swc_pages}}/r-novice-inflammation/reference/">Reference...</a></li>
     </ul>
   </div>
-  -->
+
   <!--
   <div class="col-md-6">
     <h3 id="syllabus-matlab">Programming in MATLAB</h3>
@@ -323,7 +325,7 @@ and the administrator will contact you if we need any extra information.</h4>
       <li><a href="{{site.swc_pages}}/matlab-novice-inflammation/reference/">Reference...</a></li>
      </ul>
    </div>
-   -->
+  
 </div>
 
 <div class="row">
@@ -472,10 +474,10 @@ and the administrator will contact you if we need any extra information.</h4>
       </p>
     </div>
   </div>
-</div> <!-- End of 'shell' section. -->
+</div> <!-- End of 'shell' section. 
 
 <div id="git"> <!-- Start of 'Git' section. GitHub browser compatability
-           is given at https://help.github.com/articles/supported-browsers/-->
+           is given at https://help.github.com/articles/supported-browsers/
   <h3>Git</h3>
   <p>
     Git is a version control system that lets you track who made changes
@@ -734,9 +736,9 @@ and the administrator will contact you if we need any extra information.</h4>
       </p>
     </div>
   </div>
-</div> <!-- End of 'R' section. -->
+</div> <!-- End of 'R' section. 
 
-<div id="sql"> <!-- Start of 'SQLite' section. -->
+<div id="sql"> <!-- Start of 'SQLite' section. 
   <h3>SQLite</h3>
 
   <p>
